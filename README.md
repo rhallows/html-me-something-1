@@ -53,35 +53,29 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 ```
 
-If you don't, make sure you're in the correct directory (use `pwd`), and then retrace your steps through the instructions above.
+If you don't, make sure you're in the correct directory (use `pwd`), retrace your steps through the instructions above.
 
 A few more steps and we'll be ready to go:
 
 * In the `submissions` directory, create a new directory with the same name as your GitHub username:
-```
-$ cd submissions/
-$ mkdir [USERNAME]
-```
-* Create and save a new file, `index.html`, within your username directory. Add a single line with the following HTML and save: `<p>YOUR NAME</p>`
-* In Terminal, from the project root folder (you'll need to run `cd ..` to get there) run `git status` and then, if all looks good, run `git add .` to stage your new file. Then commit and push it to your GitHub repo.
-
     ```
-    $ git commit -m "Adding my submission"
-    [gh-pages 4875550] Adding my submission
-     1 file changed, 1 insertions(+)
-     create mode 100644 submissions/chrisbay/index.html
-    $ git push origin gh-pages
+    $ cd submissions/
+    $ mkdir [USERNAME]
     ```
-    When pushing, note that we push to the `gh-pages` branch of the project, not the `master` branch (as you'll often be, and will often see in documentation).
-* You should be able to view your page live at **http://[USERNAME].github.io/html-me-something/submissions/[USERNAME]/** (replace [USERNAME] with your GitHub username). This may take a few minutes to go live, so if you don't see it right away, try again in a few minutes. That simply putting your code in a repository on GitHub with a couple of special settings (which we took care of for you) results in a live website is the magic of [GitHub Pages](https://pages.github.com). Normally, a lot more work is needed to put a page on the internet.
+* Jump down into this new directory, and create and open a new file, `index.html`. Add a single line with the following HTML and save: `<p>YOUR NAME</p>`
+* In Terminal, from the project root folder (you'll need to run `cd ../..` to get there) run `git add .` to stage your new file. Then commit and push it to your fork. When pushing, note that you're on the `gh-pages` branch of the project, not the `master` branch (as you'll often be, and will see most often in documentation). So push using
+    ```
+    git push origin gh-pages
+    ```
+* You should be able to view your page live at http://&lt;username&gt;.github.io/html-me-something/submissions/&lt;username&gt;/. This may take a few minutes to go live, so if you don't see it right away, try again in a few minutes. This is the magic of [GitHub Pages](https://pages.github.com)
 
 ## Getting to work
 
-Now it's time to build out your page! Dive in, then come back here to follow submission instructions.
+Now it's time to build a page! Dive in, then come back here to follow submission instructions.
 
-[Part 1: HTML](https://github.com/LaunchCodeEducation/html-me-something/tree/gh-pages/html)
+- HTML portion
 
-[Part 2: CSS](https://github.com/LaunchCodeEducation/html-me-something/tree/gh-pages/css)
+- CSS portion
 
 ## Submitting your work
 
@@ -89,18 +83,4 @@ Now it's time to build out your page! Dive in, then come back here to follow sub
 
 Now that you've created a lovely page, let's request that it be added to the main project repository, so course staff can add it to the class submissions directory.
 
-Visit your project page on GitHub. Since this project is a fork of the class repository, you will see the option to create a new pull request near the top. Hit the button!
-
-![New pull request](images/new-pull-request.png)
-
-On the next page, you'll see a bunch of info about the changes between your project and the main project. Scan these to get a feel for what GitHub is doing, and to make sure everything looks correct. When you're ready, go ahead and create the pull request by hitting the "Create pull request" button.
-
-![Create pull request](images/create-pull-request.png)
-
-What's going on here? To put it briefly, you're asking the owners of the main project repository which you forked/copied (i.e. LaunchCode staff) to incorporate a set of your changes into their repository. The owners will review your changes, and if everything looks good, they will merge them into the main repository. If you make additional changes to your project after submitting the pull request, those will *not* be incorporated into the main project. You would need to create an additional pull request to do that.
-
-This pattern of development -- fork, clone, modify, commit, push, pull request -- is one of the main ways that coders collaborate on GitHub, particularly on open source projects.
-
 ### Vocareum
-
-You also need to submit your work on Vocareum for grading. Log in and follow the instructions for this particular assignment.
